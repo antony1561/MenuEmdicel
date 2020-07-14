@@ -40,7 +40,7 @@ public class Producto {
     public static void injectContactsFromCloud(final QueueUtils.QueueObject o,
                                                final ArrayList<Producto> contactos,
                                                final GalleryFragment _interface) {
-        String url = "https://5f0ad7718048.ngrok.io/api/auth/productos";
+        String url = "https://cbf679da2167.ngrok.io/api/auth/productos";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
