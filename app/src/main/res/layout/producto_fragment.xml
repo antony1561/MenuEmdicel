@@ -13,7 +13,7 @@
             android:layout_height="55dp"
             android:fontFamily="arial"
             android:paddingBottom="10dp"
-            android:paddingLeft="80dp"
+            android:layout_marginLeft="100dp"
             android:text="EMDICEL"
             android:textColor="#FF9800"
             android:textSize="40sp"
@@ -38,8 +38,15 @@
             android:fontFamily="arial"
             android:text="SU MEJOR ALTERNATIVA EN CELULARES"
             android:textColor="#000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="italic"/>
+        <Button
+            android:id="@+id/carrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="carrito">
+
+        </Button>
     </LinearLayout>
     ///////////////////////////////////////////////////////////////
     <LinearLayout

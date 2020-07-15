@@ -5,12 +5,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,13 +33,24 @@ import com.pusher.client.connection.ConnectionState;
 import com.pusher.client.connection.ConnectionStateChange;
 
 public class HomeFragment extends Fragment {
-
+    ViewFlipper v_flipper;
     private HomeViewModel homeViewModel;
-
+    public void flipperimages(int image) {
+      ImageView imageView = new ImageView(this.getContext());
+      imageView.setBackgroundResource(image);
+      v_flipper.addView(imageView);
+      v_flipper.setFlipInterval(3000);//tiempode cada imagen
+      v_flipper.setAutoStart(true);
+        TranslateAnimation ta = new TranslateAnimation(0, 0, Animation.RELATIVE_TO_SELF, 200);
+        ta.setDuration(1000);
+        ta.setFillAfter(true);
+    v_flipper.setOutAnimation(this.getContext() ,android.R.anim.slide_out_right);
+    }
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
+        //////////////////////////////////////////////////////////////////////////////
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         //////////////////////////////////////////////////////////
         ///////////////////spinner combo box//////////////////////
@@ -43,6 +58,13 @@ public class HomeFragment extends Fragment {
         String [] categoriasList =  new String[] {
             "Todas las Categorias","Gama Alta", "Gama Media", "Gama Baja","Accesorios"
         };
+        /////////////////////////////////////////////////////////////////////////////////
+        int images[] = {R.drawable.descarga,R.drawable.descarga2,R.drawable.descarga3,R.drawable.descarga4};
+        v_flipper = root.findViewById(R.id.v_flipper);
+        flipperimages(images[0]);
+        flipperimages(images[1]);
+        flipperimages(images[2]);
+        flipperimages(images[3]);
         Spinner spinner = root.findViewById(R.id.categorias);
         ArrayAdapter<String> adaptador = new ArrayAdapter<>(this.getContext(),
                 android.R.layout.simple_spinner_item, categoriasList);
@@ -58,17 +80,9 @@ public class HomeFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
         });
-        ////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////
-        //final TextView textView = root.findViewById(R.id.text_home);
-        //homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-          //  @Override
-           // public void onChanged(@Nullable String s) {
-            //    textView.setText(s);
-            //}
-        //});
-        ////////////////////////////////////////////////
+
         PusherOptions options = new PusherOptions();
         options.setCluster("us2");
 

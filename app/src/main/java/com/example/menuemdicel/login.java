@@ -15,8 +15,6 @@ public class login extends AppCompatActivity {
     Button b1,b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         db = new DatabaseHelper(this);
@@ -25,6 +23,7 @@ public class login extends AppCompatActivity {
         e3=(EditText)findViewById(R.id.confircontra);
         b1=(Button)findViewById(R.id.registrarse);
         b2=(Button)findViewById(R.id.login);
+        ////////////////////////////////////////////////////////////////////////////////
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,13 +31,14 @@ public class login extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        //////////////////////////////////////////////////////////////////////
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String s1 = e1.getText().toString();
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
-                if(s1.equals("")||s2.equals("")||s3.equals("")   ){
+                if(s1.equals("")||s2.equals("")||s3.equals("")){
                     Toast.makeText(getApplicationContext(),"LOS CAMPOS ESTAN VACIOS",Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -48,13 +48,15 @@ public class login extends AppCompatActivity {
                             Boolean insert = db.insert(s1,s2);
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(),"REGISTRO SATISFACTORIO",Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(login.this,Login2.class);
+                                startActivity(i);
                             }
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"ESTE CORREO YA EXISTE",Toast.LENGTH_SHORT).show();
                         }
                     }
-                    Toast.makeText(getApplicationContext(),"LA CONTRASEÑA NO COINCIDE",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"LAS CONTRASEÑAS NO COINCIDE",Toast.LENGTH_SHORT).show();
                 }
             }
         });

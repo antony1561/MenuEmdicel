@@ -4,34 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".login"
+    android:background="#B4BBB9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:fontFamily="arial"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:text="EMDICEL"
+            android:textColor="#FF9800"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-120dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:fontFamily="arial"
+            android:text="S T O R E"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:layout_marginTop="50dp"
+            android:paddingBottom="20dp"
+            android:fontFamily="arial"
+            android:text="SU MEJOR ALTERNATIVA EN CELULARES"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="italic"/>
+    </LinearLayout>
+    ////////////////////////////////////////////
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="200dp">
     <EditText
         android:id="@+id/correo"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginLeft="30dp"
         android:hint="Correo"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="117dp" />
     <EditText
         android:id="@+id/contra"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="225dp" />
+        tools:layout_editor_absoluteY="225dp"/>
 
     <EditText
         android:id="@+id/confircontra"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
         android:ems="10"
         android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
@@ -39,18 +84,24 @@
         tools:layout_editor_absoluteY="304dp" />
     <Button
         android:id="@+id/registrarse"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
-        android:text="REGISTRARSE"
+        android:text="REGISTRAR"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="426dp" />
+        tools:layout_editor_absoluteY="426dp"
+        android:background="@drawable/button_border_radius"/>
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="INGRESAR"
+        android:text="CANCELAR"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="426dp" />
+        tools:layout_editor_absoluteY="426dp"
+        android:background="@drawable/button_border_radius"/>
 </LinearLayout>
 
 
