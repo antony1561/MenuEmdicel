@@ -39,7 +39,6 @@ public class HomeFragment extends Fragment {
       ImageView imageView = new ImageView(this.getContext());
       imageView.setBackgroundResource(image);
       v_flipper.addView(imageView);
-      v_flipper.setFlipInterval(3000);//tiempode cada imagen
       v_flipper.setAutoStart(true);
         TranslateAnimation ta = new TranslateAnimation(0, 0, Animation.RELATIVE_TO_SELF, 200);
         ta.setDuration(1000);

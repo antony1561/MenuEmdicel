@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B4BBB9"
+    android:background="#000"
     tools:context=".Login2">
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:paddingBottom="20dp"
             android:fontFamily="arial"
             android:text="S T O R E"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="italic"/>
         <TextView
@@ -39,7 +39,7 @@
             android:paddingBottom="20dp"
             android:fontFamily="arial"
             android:text="SU MEJOR ALTERNATIVA EN CELULARES"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15sp"
             android:textStyle="italic"/>
     </LinearLayout>
@@ -56,6 +56,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Correo"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:inputType="textPersonName"
             tools:layout_editor_absoluteX="99dp"
             tools:layout_editor_absoluteY="117dp" />
@@ -67,6 +69,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Contraseña"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:inputType="textPassword"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="225dp" />
@@ -96,6 +100,7 @@
             android:layout_height="wrap_content"
             android:text="Olvido su contraseña?"
             android:layout_marginLeft="110dp"
+            android:textColor="#fff"
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
     </LinearLayout>
