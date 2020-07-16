@@ -4,8 +4,6 @@
     <item>
         <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
             android:gravity="center_horizontal"
-            android:src="@drawable/logo_emdicel"
-            android:width="10dp"
-            android:height="10dp"/>
+            android:src="@drawable/logo_emdicel"/>
     </item>
 </layer-list>

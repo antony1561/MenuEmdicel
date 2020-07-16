@@ -41,5 +41,10 @@
         android:name="com.example.menuemdicel.ui.Producto.ProductoFragment"
         android:label="producto_fragment"
         tools:layout="@layout/producto_fragment"/>
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.menuemdicel.ui.perfil.perfilFragment"
+        android:label="perfil_fragment"
+        tools:layout="@layout/perfil_fragment"/>
 
 </navigation>

@@ -50,4 +50,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0) return true;
         else return false;
     }
+    ///////////////////////////////
 }
